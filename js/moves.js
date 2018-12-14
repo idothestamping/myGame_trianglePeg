@@ -1,9 +1,9 @@
 checkSolution = [ 
 				[0, 10, 20],
-				[0, 11, 20],
+				[0, 11, 22],
 				[10, 20, 30],
 				[10, 21, 32],
-				[11, 21, 21],
+				[11, 21, 31],
 				[11, 22, 33],
 				[20, 21, 22],
 				[20, 31, 42],
@@ -18,10 +18,10 @@ checkSolution = [
 				[41, 42, 43],
 				[42, 43, 44],
 				[20, 10, 0],
-				[20, 11, 0],
+				[22, 11, 0],
 				[30, 20, 10],
 				[32, 21, 10],
-				[21, 21, 11],
+				[31, 21, 11],
 				[33, 22, 11],
 				[22, 21, 20],
 				[42, 31, 20],
@@ -35,6 +35,41 @@ checkSolution = [
 				[42, 41, 40],
 				[43, 42, 41],
 				[44, 43, 42] ];
+
+
+orb00 = document.getElementById("00");
+orb10 = document.getElementById("10");
+orb11 = document.getElementById("11");
+orb20 = document.getElementById("20");
+orb21 = document.getElementById("21");
+orb22 = document.getElementById("22");
+orb30 = document.getElementById("30");
+orb31 = document.getElementById("31");
+orb32 = document.getElementById("32");
+orb33 = document.getElementById("33");
+orb40 = document.getElementById("40");
+orb41 = document.getElementById("41");
+orb42 = document.getElementById("42");
+orb43 = document.getElementById("43");
+orb44 = document.getElementById("44");
+
+orbList = [
+			"orb00",
+		 	"orb10", 
+		 	"orb11",
+		 	"orb20",
+		 	"orb21", 
+		 	"orb22",
+		 	"orb30",
+		 	"orb31", 
+		 	"orb32",
+		  	"orb33",
+		 	"orb40", 
+		 	"orb41",
+		  	"orb42",
+		 	"orb43", 
+		 	"orb44",
+		 	];
 
 
 

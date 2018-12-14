@@ -1,4 +1,4 @@
-var player = [];
+var playerArr = [];
 var orbCounter = 15;
 var allOrbs;
 var position;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", init);{
   document.getElementById("start").addEventListener("click", startGame);
 
   orbClicked = Array.from(document.getElementsByClassName("gameBox"));
-  console.log(orbClicked);
+  console.log("orbClicked");
   orbClicked.forEach(function(orb){
   		orb.addEventListener("click", handleClick); 
   })
@@ -30,98 +30,75 @@ function handleClick(e){
 	if(orbCounter == 1){
 		gameOver();
 	} else if(orbCounter == 15){
-		changeOrb(e);
 		orbCounter--;
+		removeOrb(e);
+		document.getElementById("message").innerHTML = "Select your next Move"
 	} else {
 		gameLogic(e);
-		console.log("need logic");
+		console.log("ran game Logic and current playerArr is", playerArr, " and orb counter is", orbCounter);
 	}
 }
 
 
-
-
-
-function changeOrb(e){
-	console.log("changing", e.target);
-
-  if(e.target.classList.contains("orbOn")){
-  	document.getElementById(e.target.id).classList.remove("orbOn");
+function removeOrb(e){
+	console.log("changing orb of", e.target);
+	document.getElementById(e.target.id).classList.remove("orbOn");
     document.getElementById(e.target.id).classList.add("orbOff");
-    orbCounter--;
-    console.log(orbCounter);
-  }
-  else {
+}
+
+function addOrb(e){
+	console.log("changing orb of", e.target);
+	document.getElementById(e.target.id).classList.remove("orbOff");
     document.getElementById(e.target.id).classList.add("orbOn");
-    document.getElementById(e.target.id).classList.remove("orbOff");
-    orbCounter++;
-    console.log(orbCounter);
-  }
-  // if(orbCounter = 14){
-  // 	gameOn();
-  // }
+}
+
+function toggleOrb(e){
+	console.log("changing orb of", e.target);
+	if(e.target.classList.contains("orbOn")){
+	document.getElementById(e.target.id).classList.remove("orbOn");
+    document.getElementById(e.target.id).classList.add("orbPicked");
+	} else if(e.target.classList.contains("orbPicked")){
+		document.getElementById(e.target.id).classList.remove("orbPicked")
+		document.getElementById(e.target.id).classList.add("orbOn");
+	}
 }
 
 function init(){
-  console.log("init running");
-  document.getElementById("message").innerHTML = "Press Start";
-  document.getElementById("container").style.visibility = "hidden"; 
-  console.log(gameOn);
+	console.log("init running");
+	document.getElementById("message").innerHTML = "Press Start";
+	document.getElementById("container").style.visibility = "hidden"; 
+	console.log(gameOn);
 }
 
-
 function startGame(){
-    console.log("starting game");
-    document.getElementById("title").style.visibility = "hidden"; 
-  document.getElementById("message").classList.remove("flashit");
-  document.getElementById("message").classList.add("flashit2");
-  document.getElementById("message").innerHTML = "Pick a Starting Position"
-  document.getElementById("container").style.visibility = "visible";  
+	console.log("starting game");
+	document.getElementById("title").style.visibility = "hidden"; 
+	document.getElementById("message").classList.remove("flashit");
+	document.getElementById("message").classList.add("flashit2");
+	document.getElementById("message").innerHTML = "Pick a Starting Position"
+	document.getElementById("container").style.visibility = "visible";  
     // orbList = document.getElementsByClassName("gameBox");
-    var pos = 0;
-    var gridRow = [];
-  for (var i=0 ; i<5; i++) {
-    gridRow = [];
-    for (var j=0; j<=i; j++) {
-      // index[] = [i, j]; // fill index
-      gridRow.push([i, j]);
-    }
-    board.push(gridRow);
-  }
+  //   var pos = 0;
+  //   var gridRow = [];
+  // for (var i=0 ; i<5; i++) {
+  //   gridRow = [];
+  //   for (var j=0; j<=i; j++) {
+  //     // index[] = [i, j]; // fill index
+  //     gridRow.push([i, j]);
+  //   }
+  //   board.push(gridRow);
+  // }
   // grid[i] = gridRow; // fill grid
   // console.log(grid);
   console.log("index!!!:",board);
-  console.log(orbCounter);
+  console.log("OrbCounter is", orbCounter);
 }
-
-
-function gameLogic(e){
-  console.log("gameOn Started");
-  if(e.target.classList.contains("orbOn")){
-  	console.log("now we here");
-  	player.push(parseInt(e.target.id));
-  	console.log(player);
-  } else {
-  	console.log("make another choice");
-  }
-  //check if orb is available
-  //if available "pickup"
-	
-
-
-}
-
-function gameOver(){
-	console.log("gameover");
-}
-
-
 
 function resetGame(){
   console.log("reset running");
   // document.getElementById("message").innerHTML = "Press Start"
   // allOrbs = [];
-  player = [];
+  playerArr = [];
   counter = 0;
   console.log(allOrbs.length);
   // for(i = 0; i < allOrbs.length; i++){
