@@ -4,53 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/fingerheart.ico" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>idothestamping</title>
 </head>
 
-<div class="title">
-<h1>Triangle Solitaire</h1>
-<h2 id="message"></h2>
-<br>
-			<input class = "button" id = "start" type = "reset" value = "Start Game"/>
-			<input class = "button" id = "reset" type = "reset" value = "Reset Game"/>
-
+<div id="title">
+	<br>
+	<h1>TRIANGLE PEG SOLITARE</h1>
 </div>
 
 <body>
-	<br>
 	<div class="mainContainer" id="container"> 
+
+<!-- 	<div id="board"></div>
+	<div id="result"></div> -->
 		<div class="row" id="row1">
-			<div class="gameBox" id="one"></div>
+			<div class="gameBox orbOn" id="00"></div>
 		</div>
 		<div class="row" id="row2">
-			<div class="gameBox" id="two"></div>
-			<div class="gameBox" id="three"></div>
+			<div class="gameBox orbOn" id="10"></div>
+			<div class="gameBox orbOn" id="11"></div>
 		</div>
 		<div class="row" id="row3">
-			<div class="gameBox" id="four"></div>
-			<div class="gameBox" id="five"></div>
-			<div class="gameBox" id="six"></div>
+			<div class="gameBox orbOn" id="20"></div>
+			<div class="gameBox orbOn" id="21"></div>
+			<div class="gameBox orbOn" id="22"></div>
 		</div>
 		<div class="row" id="row4">
-			<div class="gameBox" id="seven"></div>
-			<div class="gameBox" id="eight"></div>
-			<div class="gameBox" id="nine"></div>
-			<div class="gameBox" id="ten"></div>
+			<div class="gameBox orbOn" id="30"></div>
+			<div class="gameBox orbOn" id="31"></div>
+			<div class="gameBox orbOn" id="32"></div>
+			<div class="gameBox orbOn" id="33"></div>
 		</div>
 		<div class="row" id="row5">
-			<div class="gameBox" id="eleven"></div>
-			<div class="gameBox" id="twelve"></div>
-			<div class="gameBox" id="thirteen"></div>
-			<div class="gameBox" id="fourteen"></div>
-			<div class="gameBox" id="fifteen"></div>
+			<div class="gameBox orbOn" id="40"></div>
+			<div class="gameBox orbOn" id="41"></div>
+			<div class="gameBox orbOn" id="42"></div>
+			<div class="gameBox orbOn" id="43"></div>
+			<div class="gameBox orbOn" id="44"></div>
 		</div>
+	</div>
+	<h3 class="flashit" id="message"></h3>
+	<div class="menu">
+		<input class = "button" id = "start" type = "reset" value = "Start Game"/>
+		<input class = "button" id = "reset" type = "reset" value = "Reset Game"/>
 	</div>
 
 </div>
 </body>
-  <script type="text/javascript" src="js/js.js"></script>
+<!--   <script type="text/javascript" src="js/js.js"></script> -->
+<!--   <script type="text/javascript" src="js/again.js"></script> -->
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/moves.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

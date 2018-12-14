@@ -1,12 +1,45 @@
 
-.title {
+#title, .menu {
 text-align: center;
 font-family: 'Raleway', sans-serif;
 font-weight: 400;
 letter-spacing: 1px;
-font-size: 15px;
+font-size: 14px;
 color: #c9d7ff; 
 }
+
+.flashit{
+  color:#f2f;
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 1s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+
+.flashit2{
+  color:#f2f;
+	-webkit-animation: flash linear 2s infinite;
+	animation: flash linear 2s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+
 
 /*.title {
 text-align: center;
@@ -113,6 +146,7 @@ body {
 	max-width: auto;
 	background-image: url("../assets/img/background2.jpg");
 	background-size: cover; 
+	background-image: no-repeat;
 }
 
 .row {
@@ -123,7 +157,16 @@ body {
 	padding: 0;
 }
 
-div.gameBox {
+.orbOff {
+	content: url("../assets/img/dot2.gif");
+	width: 60px; 
+	height: 60px; 
+	margin: 0; 
+	padding: 0; 
+	transition-duration: 0.9s;
+}
+
+.orbOn {
 	content: url("../assets/img/colorball2.gif");
 	width: 60px; 
 	height: 60px; 
@@ -131,7 +174,7 @@ div.gameBox {
 	padding: 0; 
 	transition-duration: 0.9s;
 }
-div.gameBox:hover /*#reset:active*/ {
+.orbOn:hover /*#reset:active*/ {
 	cursor: pointer;
 	opacity: .8;
 	transition-duration: .6s;
@@ -156,7 +199,7 @@ div.gameBox:hover /*#reset:active*/ {
 	color: #6774ff;
 	font-weight: 800;
 	max-width: 125px;
-	text-align: center;
+/*	text-align: center;*/
 
 }
 #reset:hover, #start:hover {
@@ -177,4 +220,13 @@ div.gameBox:hover /*#reset:active*/ {
 	margin: 0; 
 	padding: 0; 
 	transition-duration: .9s;
+}
+
+#message {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 25px;
+	color: #c9d7ff;
 }
