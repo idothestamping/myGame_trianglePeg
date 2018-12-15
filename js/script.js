@@ -95,31 +95,28 @@ function startGame(){
 }
 
 function resetGame(){
-  console.log("reset running");
-  // document.getElementById("message").innerHTML = "Press Start"
-  // allOrbs = [];
-  playerArr = [];
-  counter = 0;
-  console.log(allOrbs.length);
-  // for(i = 0; i < allOrbs.length; i++){
-  // allOrbs[i].style.visibility = 'hidden';
-  // }
-  for(i = 0; i < allOrbs.length; i++){
-    if(allOrbs[i].classList == "orbOff"){
-        allOrbs[i].classList.remove("orbOff");
-    }
-    else {
-      allOrbs[i].classList.add("orbOn");
-      console.log(allOrbs.length);
-      }
+	console.log("reset running");
+	playerArr = [];
+	orbCounter = 15;
+  
+    orbReset = [...document.getElementsByClassName("gameBox")];
+    console.log(orbReset);
 
-    if(startGame == false) {
-      startGame();
-      allOrbs = [];
-      console.log(allOrbs.length);
-    }
-  }
+    orbReset.forEach(function(orb) {
+    	orb.classList.remove('orbOff');
+    	orb.classList.remove('orbPicked');
+    	orb.classList.add('orbOn');
+    });
+    document.getElementById("message").style.visibility = "visible";  
+    document.getElementById("message").innerHTML = "Pick a Starting Position"
 }
 
+function checkWin(){
+	console.log("checkWin");
+	if(orbCounter == 1){
+	document.getElementById("message").style.visibility = "visible";  
+    document.getElementById("message").innerHTML = "YOU WON!"
+	}
+}
 
 

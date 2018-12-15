@@ -10,7 +10,6 @@ function gameLogic(e){
       console.log("orb un-selected");
       playerArr = [];
   } else if(playerArr.length == 1 && e.target.classList.contains("orbOff")){
-      console.log("checking kfdsa;f;fd")
       playerArr.push(parseInt(e.target.id));
       let trio = checkPossibleMove(e);
       console.log("This is tring trio:", trio);
@@ -21,6 +20,7 @@ function gameLogic(e){
         document.getElementById("message").style.visibility = "hidden"; 
       }
       console.log("current playerArr is", playerArr, " and orb counter is", orbCounter);
+      checkWin();
   } else {
     console.log("you can't select this");
   }
@@ -42,6 +42,12 @@ function checkPossibleMove(e){
     return false;
 }
 
+function checkStalemate(){
+
+}
+
+
+
 function makeMove(trio){
     document.getElementById(trio[2]).classList.remove("orbOff");
     document.getElementById(trio[2]).classList.add("orbOn");
@@ -50,11 +56,9 @@ function makeMove(trio){
     document.getElementById(trio[0]).classList.add("orbOff");
 
     document.getElementById(trio[1]).classList.remove("orbOn");
-
-
-
     document.getElementById(trio[1]).classList.add("orbOff");
-  }
+  
+}
 
   // document.getElementById(trio[1]).classList.remove("orbOn");
 
