@@ -2,7 +2,7 @@
 
 Triangle Peg game for Project 1 at General Assembly, WDI-22
 
-This is game is based on Cracker Barrel Restaraunt's 15-peg triangle board game on each table... with a space theme!
+This game is based on Cracker Barrel Restaraunt's 15-peg triangle board game on each table... with a space theme!
 
 [Github Deployment](https://idothestamping.github.io/myGame_trianglePeg/)
 
