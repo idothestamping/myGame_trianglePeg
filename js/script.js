@@ -2,7 +2,6 @@ var playerArr = [];
 var orbCounter = 15;
 var orbClicked = false;
 var grid = []; // [[0], [1,2], [3,4,5],...]
-var board = []; // [[0,0], [1,0], [1,1],...]
 var checkSolution = [ 
 				[0, 10, 20],
 				[0, 11, 22],
@@ -40,7 +39,6 @@ var checkSolution = [
 				[42, 41, 40],
 				[43, 42, 41],
 				[44, 43, 42] ];
-
 
 document.addEventListener("DOMContentLoaded", init);{
   console.log("dom content has loaded");
@@ -81,16 +79,7 @@ function gameLogic(e){
       toggleOrb(e);
       console.log("orb un-selected");
       playerArr = [];
-  } 
-  // else if(playerArr.length == 1 && e.target.classList.contains("orbOn")){
-  // 	  document.getElementById(playerArr[0]).classList.remove("orbon");
-	 //  document.getElementById(playerArr[0]).classList.add("orbPicked");
-	 //  console.log(playerArr[0]);
-  // 	  // playerArr = [];
-  // 	  // playerArr.push(parseInt(e.target.id));
-  // 	  toggleOrb(e);
-  // } 
-  else if(playerArr.length == 1 && e.target.classList.contains("orbOff")){
+  } else if(playerArr.length == 1 && e.target.classList.contains("orbOff")){
       playerArr.push(parseInt(e.target.id));
       let trio = checkPossibleMove(e);
       console.log("This is tring trio:", trio);
@@ -118,6 +107,7 @@ function checkPossibleMove(e){
                 return innerArr;
             } else {
                 console.log("possible move array not matched");
+                // playerArr.pop();
             }
         }
     }
@@ -175,7 +165,6 @@ function toggleOrb(e){
 		document.getElementById(e.target.id).classList.add("orbOn");
 	}
 }
-
 
 function init(){
 	console.log("init running");

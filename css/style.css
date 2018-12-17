@@ -127,8 +127,7 @@ body {
 
 #reset, #start {
 	opacity: .5;
-	display: inline-block;
-	padding: 1vh 1.5vw;
+	padding: 1vh 1vw;
 	background-color:  white;
 	border-radius: 5px;
 	font-size: 1em;
@@ -141,9 +140,9 @@ body {
 	color: #6774ff;
 	font-weight: 800;
 	max-width: 125px;
-/*	text-align: center;*/
-
+	text-align: center;
 }
+
 #reset:hover, #start:hover {
 	cursor: pointer;
 	opacity: .8;
@@ -161,10 +160,3 @@ body {
 	font-size: 25px;
 	color: #c9d7ff;
 }
-.tps  {
-/*     background-color: lightblue;*/
-     width: 500px;
-     position: absolute; top: 200; left:200;
-     text-align: center;
-
-}  
