@@ -1,4 +1,4 @@
-# myGame_trianglePeg
+# Triangle Peg Game
 
 Triangle Peg game for Project 1 at General Assembly, WDI-22
 
